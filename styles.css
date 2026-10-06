@@ -1,0 +1,363 @@
+/* Meta Reels Bulk AutoFill Widget Styling */
+
+#mrf-floating-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 420px;
+  max-height: 92vh;
+  background: #18191a;
+  color: #e4e6eb;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 9999999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 13px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#mrf-floating-widget.minimized {
+  width: auto;
+  max-height: auto;
+  border-radius: 30px;
+}
+
+#mrf-floating-widget.minimized .mrf-content,
+#mrf-floating-widget.minimized .mrf-footer {
+  display: none !important;
+}
+
+/* Header */
+.mrf-header {
+  background: #242526;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #3a3b3c;
+  cursor: grab;
+  user-select: none;
+}
+
+.mrf-title-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mrf-badge {
+  background: #0084ff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mrf-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0f2f5;
+  margin: 0;
+}
+
+.mrf-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mrf-btn-icon {
+  background: transparent;
+  border: none;
+  color: #b0b3b8;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mrf-btn-icon:hover {
+  background: #3a3b3c;
+  color: #fff;
+}
+
+/* Content Area */
+.mrf-content {
+  padding: 14px 16px;
+  overflow-y: auto;
+  max-height: calc(92vh - 130px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mrf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mrf-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #b0b3b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mrf-label span.sub {
+  font-weight: 400;
+  color: #8a8d91;
+  font-size: 11px;
+}
+
+/* Inputs & Textareas */
+.mrf-textarea {
+  width: 100%;
+  height: 120px;
+  background: #242526;
+  border: 1px solid #3a3b3c;
+  border-radius: 8px;
+  color: #e4e6eb;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-family: monospace;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.mrf-textarea:focus {
+  outline: none;
+  border-color: #0084ff;
+  box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.2);
+}
+
+.mrf-row {
+  display: flex;
+  gap: 10px;
+}
+
+.mrf-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mrf-input {
+  width: 100%;
+  background: #242526;
+  border: 1px solid #3a3b3c;
+  border-radius: 6px;
+  color: #e4e6eb;
+  padding: 7px 10px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.mrf-input:focus {
+  outline: none;
+  border-color: #0084ff;
+}
+
+.mrf-select {
+  width: 100%;
+  background: #242526;
+  border: 1px solid #3a3b3c;
+  border-radius: 6px;
+  color: #e4e6eb;
+  padding: 7px 10px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+/* Anti-ban Box */
+.mrf-antiban-box {
+  background: rgba(46, 139, 87, 0.15);
+  border: 1px solid rgba(46, 139, 87, 0.35);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mrf-antiban-title {
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mrf-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #e4e6eb;
+  cursor: pointer;
+}
+
+.mrf-checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #0084ff;
+}
+
+/* Status & Progress */
+.mrf-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mrf-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #3a3b3c;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mrf-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0084ff, #00c6ff);
+  transition: width 0.3s ease;
+}
+
+.mrf-status-text {
+  font-size: 12px;
+  color: #b0b3b8;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Console Log */
+.mrf-log {
+  background: #111213;
+  border: 1px solid #2d2e30;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: monospace;
+  font-size: 11px;
+  color: #a0aec0;
+  height: 90px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.mrf-log .log-info { color: #60a5fa; }
+.mrf-log .log-success { color: #4ade80; }
+.mrf-log .log-warn { color: #facc15; }
+.mrf-log .log-error { color: #f87171; }
+
+/* Buttons & Footer */
+.mrf-footer {
+  padding: 12px 16px;
+  background: #242526;
+  border-top: 1px solid #3a3b3c;
+  display: flex;
+  gap: 8px;
+}
+
+.mrf-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.mrf-btn-primary {
+  background: #0084ff;
+  color: #fff;
+}
+.mrf-btn-primary:hover:not(:disabled) {
+  background: #0073e6;
+}
+
+.mrf-btn-secondary {
+  background: #3a3b3c;
+  color: #e4e6eb;
+}
+.mrf-btn-secondary:hover:not(:disabled) {
+  background: #4e4f50;
+}
+
+.mrf-btn-danger {
+  background: #e41e3f;
+  color: #fff;
+}
+.mrf-btn-danger:hover:not(:disabled) {
+  background: #c81a37;
+}
+
+.mrf-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Row Highlights on Meta's table */
+.mrf-highlight-active {
+  outline: 2px solid #0084ff !important;
+  background-color: rgba(0, 132, 255, 0.08) !important;
+}
+
+.mrf-highlight-done {
+  outline: 2px solid #4ade80 !important;
+  background-color: rgba(74, 222, 128, 0.08) !important;
+}
+
+.mrf-highlight-error {
+  outline: 2px solid #f87171 !important;
+  background-color: rgba(248, 113, 113, 0.08) !important;
+}
+
+/* Persistent Floating Launcher Button */
+#mrf-launcher-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0084ff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0, 132, 255, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 9999998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+#mrf-launcher-btn:hover {
+  transform: translateY(-2px);
+  background: #0073e6;
+  box-shadow: 0 6px 20px rgba(0, 132, 255, 0.6);
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Meta Reels Bulk AutoFill</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 360px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #18191a;
+      color: #e4e6eb;
+      padding: 16px;
+      font-size: 13px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #3a3b3c;
+      margin-bottom: 14px;
+    }
+    .icon-box {
+      width: 34px;
+      height: 34px;
+      background: #0084ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .title h3 {
+      font-size: 14px;
+      color: #f0f2f5;
+      font-weight: 600;
+    }
+    .title p {
+      font-size: 11px;
+      color: #b0b3b8;
+    }
+    .status-card {
+      background: #242526;
+      border: 1px solid #3a3b3c;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #e41e3f;
+      flex-shrink: 0;
+    }
+    .status-dot.active {
+      background: #4ade80;
+      box-shadow: 0 0 8px #4ade80;
+    }
+    .status-text {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .status-text strong {
+      display: block;
+      color: #f0f2f5;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      transition: background 0.15s;
+    }
+    .btn-primary {
+      background: #0084ff;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #0073e6;
+    }
+    .btn-secondary {
+      background: #3a3b3c;
+      color: #e4e6eb;
+    }
+    .btn-secondary:hover {
+      background: #4e4f50;
+    }
+    .tips {
+      background: rgba(0, 132, 255, 0.08);
+      border-left: 3px solid #0084ff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #b0b3b8;
+      line-height: 1.4;
+    }
+    .tips strong {
+      color: #e4e6eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon-box">🚀</div>
+    <div class="title">
+      <h3>Meta Reels AutoFill</h3>
+      <p>Carga masiva & Programador Humano</p>
+    </div>
+  </div>
+
+  <div class="status-card" id="status-card">
+    <div class="status-dot" id="status-dot"></div>
+    <div class="status-text" id="status-text">
+      <strong>Verificando página...</strong>
+      <span>Comprobando si estás en Meta Business Suite</span>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" id="btn-open-panel">
+    ✨ Abrir / Mostrar Panel en Pantalla
+  </button>
+
+  <button class="btn btn-secondary" id="btn-go-bulk">
+    🌐 Ir a Carga Masiva de Reels
+  </button>
+
+  <div class="tips">
+    💡 <strong>Instrucciones:</strong><br>
+    1. Si ya tenías abierta la pestaña de Facebook antes de instalar la extensión, <strong>recarga la página (F5)</strong>.<br>
+    2. El panel flotante aparecerá directamente sobre la pantalla de subida masiva.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
